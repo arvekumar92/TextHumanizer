@@ -57,6 +57,10 @@ async def root():
 
 @api_router.post("/rephrase", response_model=RephraseResponse)
 async def rephrase_text(request: RephraseRequest):
+    # Validate input text
+    if not request.text or not request.text.strip():
+        raise HTTPException(status_code=422, detail="Text cannot be empty")
+    
     try:
         # Get API key from environment
         api_key = os.environ.get('EMERGENT_LLM_KEY')
