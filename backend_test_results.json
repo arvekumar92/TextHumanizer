@@ -1,0 +1,76 @@
+{
+  "summary": {
+    "total_tests": 11,
+    "passed_tests": 10,
+    "success_rate": "90.9%",
+    "timestamp": "2025-10-31T16:39:38.388397"
+  },
+  "detailed_results": [
+    {
+      "test": "Root Endpoint",
+      "status": "PASS",
+      "details": "Status: 200, Response: {\n  \"message\": \"TextHumanizer API\"\n}...",
+      "timestamp": "2025-10-31T16:38:54.834333"
+    },
+    {
+      "test": "Rephrase - Conversational",
+      "status": "PASS",
+      "details": "Status: 200, Response: {\n  \"rephrased_text\": \"Here\\u2019s a test sentence that could use a rewrite.\",\n  \"original_text\": \"This is a test sentence that needs rephrasing.\",\n  \"tone\": \"conversational\",\n  \"word_count\": 9,\n  \"ch...",
+      "timestamp": "2025-10-31T16:39:00.016186"
+    },
+    {
+      "test": "Rephrase - Formal",
+      "status": "PASS",
+      "details": "Status: 200, Response: {\n  \"rephrased_text\": \"Hello. How are you?\",\n  \"original_text\": \"Hey there! How's it going?\",\n  \"tone\": \"formal\",\n  \"word_count\": 4,\n  \"char_count\": 19\n}...",
+      "timestamp": "2025-10-31T16:39:04.811617"
+    },
+    {
+      "test": "Rephrase - Academic",
+      "status": "PASS",
+      "details": "Status: 200, Response: {\n  \"rephrased_text\": \"This factor is crucial to our study.\",\n  \"original_text\": \"This thing is really important for our study.\",\n  \"tone\": \"academic\",\n  \"word_count\": 7,\n  \"char_count\": 36\n}...",
+      "timestamp": "2025-10-31T16:39:10.404422"
+    },
+    {
+      "test": "Rephrase - Creative",
+      "status": "PASS",
+      "details": "Status: 200, Response: {\n  \"rephrased_text\": \"Today greets us with lovely weather.\",\n  \"original_text\": \"The weather is nice today.\",\n  \"tone\": \"creative\",\n  \"word_count\": 6,\n  \"char_count\": 36\n}...",
+      "timestamp": "2025-10-31T16:39:16.442454"
+    },
+    {
+      "test": "Rephrase - Empty Text",
+      "status": "FAIL",
+      "details": "Expected 422, got 200. Response: {\"rephrased_text\":\"Please paste the text you\u2019d like me to rephrase.\",\"original_text\":\"\",\"tone\":\"conversational\",\"word_count\":9,\"char_count\":48}...",
+      "timestamp": "2025-10-31T16:39:26.014039"
+    },
+    {
+      "test": "Rephrase - Invalid Tone",
+      "status": "PASS",
+      "details": "Status: 200, Response: {\n  \"rephrased_text\": \"Here's some sample text.\",\n  \"original_text\": \"Test text\",\n  \"tone\": \"invalid_tone\",\n  \"word_count\": 4,\n  \"char_count\": 24\n}...",
+      "timestamp": "2025-10-31T16:39:38.196780"
+    },
+    {
+      "test": "Save History",
+      "status": "PASS",
+      "details": "Status: 200, Response: {\n  \"id\": \"6ad3e916-d321-4870-bf52-da0b449dcd61\",\n  \"original_text\": \"Test original text\",\n  \"rephrased_text\": \"Test rephrased text\",\n  \"tone\": \"conversational\",\n  \"timestamp\": \"2025-10-31T16:39:38.25...",
+      "timestamp": "2025-10-31T16:39:38.270382"
+    },
+    {
+      "test": "Get History",
+      "status": "PASS",
+      "details": "Status: 200, Response: [\n  {\n    \"id\": \"6ad3e916-d321-4870-bf52-da0b449dcd61\",\n    \"original_text\": \"Test original text\",\n    \"rephrased_text\": \"Test rephrased text\",\n    \"tone\": \"conversational\",\n    \"timestamp\": \"2025-10-...",
+      "timestamp": "2025-10-31T16:39:38.312440"
+    },
+    {
+      "test": "Delete History",
+      "status": "PASS",
+      "details": "Status: 200, Response: {\n  \"message\": \"History item deleted\"\n}...",
+      "timestamp": "2025-10-31T16:39:38.352687"
+    },
+    {
+      "test": "Delete Non-existent History",
+      "status": "PASS",
+      "details": "Status: 404, Response: {\n  \"detail\": \"History item not found\"\n}...",
+      "timestamp": "2025-10-31T16:39:38.387447"
+    }
+  ]
+}
