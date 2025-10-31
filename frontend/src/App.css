@@ -1,34 +1,76 @@
-.App-logo {
-    height: 40vmin;
-    pointer-events: none;
+.app-container {
+  min-height: 100vh;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-    .App-logo {
-        animation: App-logo-spin infinite 20s linear;
-    }
+.main-card {
+  transition: box-shadow 0.3s ease;
 }
 
-.App-header {
-    background-color: #0f0f10;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
-    color: white;
+.main-card:hover {
+  box-shadow: 0 20px 60px rgba(20, 184, 166, 0.15);
 }
 
-.App-link {
-    color: #61dafb;
+.tone-button {
+  transition: background-color 0.2s ease, transform 0.1s ease;
 }
 
-@keyframes App-logo-spin {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
+.tone-button:hover {
+  transform: translateY(-1px);
+}
+
+.tone-button:active {
+  transform: translateY(0);
+}
+
+.action-button {
+  transition: all 0.2s ease;
+}
+
+.action-button:hover {
+  transform: scale(1.02);
+}
+
+.action-button:active {
+  transform: scale(0.98);
+}
+
+.history-item {
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.history-item:hover {
+  background-color: rgba(20, 184, 166, 0.05);
+  transform: translateX(4px);
+}
+
+.loading-spinner {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.scroll-smooth {
+  scroll-behavior: smooth;
 }
